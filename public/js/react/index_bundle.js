@@ -732,7 +732,7 @@ var _direction=__webpack_require__(181);var _direction2=_interopRequireDefault(_
 
 
 
-
+//bike
 var _bike=__webpack_require__(182);
 var _bike2=_interopRequireDefault(_bike);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function");}
 var Map=function(){function Map(){_classCallCheck(this,Map);
