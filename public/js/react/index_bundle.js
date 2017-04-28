@@ -726,12 +726,13 @@ name,debugID){if(warnedProperties.hasOwnProperty(name)&&warnedProperties[name])r
 void 0;warnedProperties[name]=true;return true}}return true}function warnInvalidARIAProps(debugID,element){var invalidProps=[];for(var key in element.props){var isValid=validateProperty(element.type,key,debugID);if(!isValid)invalidProps.push(key)}var unknownPropString=invalidProps.map(function(prop){return"`"+prop+"`"}).join(", ");if(invalidProps.length===1)process.env.NODE_ENV!=="production"?warning(false,"Invalid aria prop %s on <%s> tag. "+"For details, see https://fb.me/invalid-aria-prop%s",unknownPropString,
 element.type,ReactComponentTreeHook.getStackAddendumByID(debugID)):void 0;else if(invalidProps.length>1)process.env.NODE_ENV!=="production"?warning(false,"Invalid aria props %s on <%s> tag. "+"For details, see https://fb.me/invalid-aria-prop%s",unknownPropString,element.type,ReactComponentTreeHook.getStackAddendumByID(debugID)):void 0}function handleElement(debugID,element){if(element==null||typeof element.type!=="string")return;if(element.type.indexOf("-")>=0||element.props.is)return;warnInvalidARIAProps(debugID,
 element)}var ReactDOMInvalidARIAHook={onBeforeMountComponent:function(debugID,element){if(process.env.NODE_ENV!=="production")handleElement(debugID,element)},onBeforeUpdateComponent:function(debugID,element){if(process.env.NODE_ENV!=="production")handleElement(debugID,element)}};module.exports=ReactDOMInvalidARIAHook}).call(exports,__webpack_require__(4))},function(module,exports,__webpack_require__){Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,
-props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor}}();var _person=__webpack_require__(180);var _person2=_interopRequireDefault(_person);
+props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor}}();
 
 
 
 
 //bike
+var _person=__webpack_require__(180);var _person2=_interopRequireDefault(_person);
 var _direction=__webpack_require__(181);var _direction2=_interopRequireDefault(_direction);
 var _bike=__webpack_require__(182);
 var _bike2=_interopRequireDefault(_bike);
