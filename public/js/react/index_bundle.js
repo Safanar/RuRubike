@@ -734,8 +734,8 @@ props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumer
 //bike
 var _person=__webpack_require__(180);var _person2=_interopRequireDefault(_person);
 var _direction=__webpack_require__(181);var _direction2=_interopRequireDefault(_direction);
-var _bike=__webpack_require__(182);
-var _bike2=_interopRequireDefault(_bike);
+//var _bike=__webpack_require__(182);
+//var _bike2=_interopRequireDefault(_bike);
 function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function");}
 
 var Map=function(){
@@ -762,8 +762,8 @@ var Map=function(){
 						obj.attachSecretMessage();
 						this.rubikes.push(obj)
 					}
-				/*else 
-					for(var i=0;i<bikes.length&&i<this.rubikes.length;i++){var bike=bikes[i];var myLatlng=new google.maps.LatLng(parseFloat(bike.location.latitude),parseFloat(bike.location.longitude));this.rubikes[i].marker.setPosition(myLatlng)}*/
+				else 
+					for(var i=0;i<bikes.length&&i<this.rubikes.length;i++){var bike=bikes[i];var myLatlng=new google.maps.LatLng(parseFloat(bike.location.latitude),parseFloat(bike.location.longitude));this.rubikes[i].marker.setPosition(myLatlng)}
 				}
 				},{key:"setNearestBikePath",value:function setNearestBikePath(){this.target=-1;var minDis=2E5;for(var i=0;i<this.rubikes.length;i++)if(this.rubikes[i].bike.state==
 "1"){var dis=google.maps.geometry.spherical.computeDistanceBetween(this.person.getPosition(),this.rubikes[i].marker.getPosition());
