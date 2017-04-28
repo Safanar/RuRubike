@@ -760,7 +760,7 @@ var Map=function(){
 					for(var i=0;i<bikes.length;i++){
 						var obj=new _bike2.default(this,bikes[i],i);
 						obj.attachSecretMessage();
-						this.rubikes.push(obj)
+						this.rubikes.push(null)
 					}
 				else for(var i=0;i<bikes.length&&i<this.rubikes.length;i++){var bike=bikes[i];var myLatlng=new google.maps.LatLng(parseFloat(bike.location.latitude),parseFloat(bike.location.longitude));this.rubikes[i].marker.setPosition(myLatlng)}
 				}
@@ -773,6 +773,7 @@ this.googleMap.setOptions({zoom:18});
 this.googleMap.setCenter(initialLocation);
 this.person.setPosition(initialLocation)}.bind(this))}}]);
 return Map}();
+
 exports.default=Map},function(module,exports){Object.defineProperty(exports,"__esModule",{value:true});
 var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;
 descriptor.configurable=true;
