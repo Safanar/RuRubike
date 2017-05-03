@@ -11019,7 +11019,9 @@
             module.exports = ReactDOMInvalidARIAHook
         }).call(exports, __webpack_require__(4))
     },
-    function(module, exports, __webpack_require__) {
+    
+	//179 main
+	function(module, exports, __webpack_require__) {
         Object.defineProperty(exports, "__esModule", {
             value: true
         });
@@ -11041,8 +11043,7 @@
             }
         }();
 		
-		//bike
-		
+
         var _person = __webpack_require__(180);
         var _person2 = _interopRequireDefault(_person);
         var _direction = __webpack_require__(181);
@@ -11388,6 +11389,7 @@
         Bike.panorama = null;
         Bike.currentInfowindow = null
     }
+	//183
 	,function(module, exports, __webpack_require__) {
         Object.defineProperty(exports, "__esModule", {
             value: true
@@ -11413,10 +11415,12 @@
             this.socket.on("log", function(log) {
                 console.log(log)
             });
+			/*
             this.socket.on("bikes", function(response) {
                 var bikes = response.result;
                 _this.map.setBikes(bikes)
             })
+			*/
         };
         exports.default = Socket
     },
@@ -11773,7 +11777,9 @@
             return Math.ceil(ms / n) + " " + name + "s"
         }
     },
-    function(module, exports, __webpack_require__) {
+    
+	//190
+	function(module, exports, __webpack_require__) {
         var debug = __webpack_require__(191)("socket.io-parser");
         var json = __webpack_require__(194);
         var Emitter = __webpack_require__(197);
@@ -13183,6 +13189,7 @@
         module.exports = __webpack_require__(204);
         module.exports.parser = __webpack_require__(211)
     },
+	//204
     function(module, exports, __webpack_require__) {
         (function(global) {
             var transports = __webpack_require__(205);
@@ -15371,7 +15378,9 @@
             return this
         }())
     },
-    function(module, exports, __webpack_require__) {
+    
+	//230
+	function(module, exports, __webpack_require__) {
         var parser =
             __webpack_require__(190);
         var Emitter = __webpack_require__(232);
