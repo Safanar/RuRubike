@@ -11075,20 +11075,20 @@
                 this.googleMap = new google.maps.Map(document.getElementById("googleMapDiv"), this.mapOptions);
                 
 				this.person = new _person2.default(this);
-				/*
+				
                 this.bikeDirections = new _direction2.default(this, "blue");
                 this.placeDirections = new _direction2.default(this, "red");
-				*/
+				
                 this.lockMove = this.lockMove.bind(this);
                 this.unLockMove = this.unLockMove.bind(this);
                 this.setOriginLocation = this.setOriginLocation.bind(this);
 				this.setBikes = this.setBikes.bind(this);
-				/*
+				
                 this.setNearestBikePath =this.setNearestBikePath.bind(this);
                 this.clearPath = this.clearPath.bind(this);
                 this.findPlacePath = this.findPlacePath.bind(this);
                 this.clearPlacePath = this.clearPlacePath.bind(this);
-				*/
+				
                 this.setOriginLocation = this.setOriginLocation.bind(this);
                 this.setOriginLocation()
             }
@@ -11122,7 +11122,7 @@
                                 this.rubikes[i].marker.setPosition(myLatlng)
                             }
                 }
-            }/*, {
+            }, {
                 key: "setNearestBikePath",
                 value: function setNearestBikePath() {
                     this.target = -1;
@@ -11160,7 +11160,7 @@
                 value: function clearPlacePath() {
                     this.placeDirections.clearPath()
                 }
-            }*/, {
+            }, {
                 key: "setOriginLocation",
                 value: function setOriginLocation() {
                     if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(position) {
@@ -11335,7 +11335,7 @@
                 _classCallCheck(this, Bike);
                 this.bike = bike;
                 this.icon = {
-                    url: "http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/magic-marker-icons-transport-travel/116392-magic-marker-icon-transport-travel-transportation-bicycle.png",
+                    url: "https://s-media-cache-ak0.pinimg.com/originals/7e/0f/a8/7e0fa8e40440ec3409ee08eb747126cc.jpg",
                     scaledSize: new google.maps.Size(40, 40)
                 };
                 this.marker = new google.maps.Marker({
