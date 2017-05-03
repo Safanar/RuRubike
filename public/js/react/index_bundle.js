@@ -11335,7 +11335,7 @@
                 _classCallCheck(this, Bike);
                 this.bike = bike;
                 this.icon = {
-                    url: "https://s-media-cache-ak0.pinimg.com/originals/7e/0f/a8/7e0fa8e40440ec3409ee08eb747126cc.jpg",
+                    url: "http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/magic-marker-icons-transport-travel/116392-magic-marker-icon-transport-travel-transportation-bicycle.png",
                     scaledSize: new google.maps.Size(40, 40)
                 };
                 this.marker = new google.maps.Marker({
