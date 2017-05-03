@@ -11082,11 +11082,13 @@
                 this.lockMove = this.lockMove.bind(this);
                 this.unLockMove = this.unLockMove.bind(this);
                 this.setOriginLocation = this.setOriginLocation.bind(this);
-                //this.setBikes = this.setBikes.bind(this);
-                //this.setNearestBikePath =this.setNearestBikePath.bind(this);
+                /*
+				this.setBikes = this.setBikes.bind(this);
+                this.setNearestBikePath =this.setNearestBikePath.bind(this);
                 this.clearPath = this.clearPath.bind(this);
                 this.findPlacePath = this.findPlacePath.bind(this);
                 this.clearPlacePath = this.clearPlacePath.bind(this);
+				*/
                 this.setOriginLocation = this.setOriginLocation.bind(this);
                 this.setOriginLocation()
             }
@@ -11104,7 +11106,7 @@
                         draggable: true
                     })
                 }
-            }/*, {
+            }, {
                 key: "setBikes",
                 value: function setBikes(bikes) {
                     if (this.rubikes.length ==
@@ -11158,7 +11160,7 @@
                 value: function clearPlacePath() {
                     this.placeDirections.clearPath()
                 }
-            }*/, {
+            }, {
                 key: "setOriginLocation",
                 value: function setOriginLocation() {
                     if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(position) {
@@ -15815,7 +15817,7 @@
                 _this.hideSearchPanel = _this.hideSearchPanel.bind(_this);
                 return _this
             }
-            _createClass(UI, [/*{
+            _createClass(UI, [{
                 key: "getNearestBike",
                 value: function getNearestBike() {
                     if (this.state.navigationButToggle) {
@@ -15832,7 +15834,7 @@
                         $("#navigationBut i").html("stop")
                     }
                 }
-            },*/ {
+            }, {
                 key: "myLocation",
                 value: function myLocation() {
                     if (this.state.locationOriginToggle) {
