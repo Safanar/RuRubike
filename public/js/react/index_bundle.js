@@ -1,5 +1,6 @@
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
+ Vayne
 */
 (function(modules){var installedModules={};function __webpack_require__(moduleId){if(installedModules[moduleId])return installedModules[moduleId].exports;var module=installedModules[moduleId]={exports:{},id:moduleId,loaded:false};modules[moduleId].call(module.exports,module,module.exports,__webpack_require__);module.loaded=true;return module.exports}__webpack_require__.m=modules;__webpack_require__.c=installedModules;__webpack_require__.p="";return __webpack_require__(0)})([function(module,exports,
 __webpack_require__){module.exports=__webpack_require__(1)},function(module,exports,__webpack_require__){Object.defineProperty(exports,"__esModule",{value:true});exports.ui=exports.map=undefined;var _react=__webpack_require__(2);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(33);var _map=__webpack_require__(179);var _map2=_interopRequireDefault(_map);var _socket=__webpack_require__(183);var _socket2=_interopRequireDefault(_socket);var _UI=__webpack_require__(237);var _UI2=
