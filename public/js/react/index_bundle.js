@@ -11416,7 +11416,7 @@
             /*this.socket.on("bikes", function(response) {
                 var bikes = response.result;
                 _this.map.setBikes(bikes)
-            */})
+            })*/
         };
         exports.default = Socket
     },
