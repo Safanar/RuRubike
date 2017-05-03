@@ -20,8 +20,7 @@
     __webpack_require__.c = installedModules;
     __webpack_require__.p = "";
     return __webpack_require__(0)
-})([function(module, exports,
-        __webpack_require__) {
+})([function(module, exports,__webpack_require__) {
         module.exports = __webpack_require__(1)
     }, function(module, exports, __webpack_require__) {
         Object.defineProperty(exports, "__esModule", {
@@ -11043,14 +11042,14 @@
         }();
 		
 		//bike
-		/*
+		
         var _person = __webpack_require__(180);
         var _person2 = _interopRequireDefault(_person);
         var _direction = __webpack_require__(181);
         var _direction2 = _interopRequireDefault(_direction);
         var _bike = __webpack_require__(182);
         var _bike2 = _interopRequireDefault(_bike);
-        */
+        
         function _interopRequireDefault(obj) {
             return obj && obj.__esModule ? obj : {
                 default: obj
@@ -11106,7 +11105,7 @@
                         draggable: true
                     })
                 }
-            }, {
+            }/*, {
                 key: "setBikes",
                 value: function setBikes(bikes) {
                     if (this.rubikes.length ==
@@ -11160,7 +11159,7 @@
                 value: function clearPlacePath() {
                     this.placeDirections.clearPath()
                 }
-            }, {
+            }*/, {
                 key: "setOriginLocation",
                 value: function setOriginLocation() {
                     if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(position) {
@@ -11177,8 +11176,8 @@
             return Map
         }();
         exports.default = Map
-    }/*,
-    function(module, exports) {
+    }
+	,function(module, exports) {
         Object.defineProperty(exports, "__esModule", {
             value: true
         });
@@ -11387,8 +11386,8 @@
         exports.default = Bike;
         Bike.panorama = null;
         Bike.currentInfowindow = null
-    }*/,
-    function(module, exports, __webpack_require__) {
+    }
+	,function(module, exports, __webpack_require__) {
         Object.defineProperty(exports, "__esModule", {
             value: true
         });
