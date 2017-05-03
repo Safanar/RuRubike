@@ -1,6 +1,6 @@
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
- Vayne beauty ver. OK
+ Vayne beauty ver.
 */
 (function(modules) {
     var installedModules = {};
