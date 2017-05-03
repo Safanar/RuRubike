@@ -11041,13 +11041,16 @@
                 return Constructor
             }
         }();
+		
+		//bike
+		/*
         var _person = __webpack_require__(180);
         var _person2 = _interopRequireDefault(_person);
         var _direction = __webpack_require__(181);
         var _direction2 = _interopRequireDefault(_direction);
         var _bike = __webpack_require__(182);
         var _bike2 = _interopRequireDefault(_bike);
-
+        */
         function _interopRequireDefault(obj) {
             return obj && obj.__esModule ? obj : {
                 default: obj
@@ -11069,17 +11072,18 @@
                     zoom: 18,
                     disableDefaultUI: true
                 };
-                this.rubikes = [];
+                //this.rubikes = [];
                 this.googleMap = new google.maps.Map(document.getElementById("googleMapDiv"), this.mapOptions);
-                this.person = new _person2.default(this);
+                /*
+				this.person = new _person2.default(this);
                 this.bikeDirections = new _direction2.default(this, "blue");
                 this.placeDirections = new _direction2.default(this, "red");
+				*/
                 this.lockMove = this.lockMove.bind(this);
                 this.unLockMove = this.unLockMove.bind(this);
                 this.setOriginLocation = this.setOriginLocation.bind(this);
-                this.setBikes = this.setBikes.bind(this);
-                this.setNearestBikePath =
-                    this.setNearestBikePath.bind(this);
+                //this.setBikes = this.setBikes.bind(this);
+                //this.setNearestBikePath =this.setNearestBikePath.bind(this);
                 this.clearPath = this.clearPath.bind(this);
                 this.findPlacePath = this.findPlacePath.bind(this);
                 this.clearPlacePath = this.clearPlacePath.bind(this);
@@ -11100,7 +11104,7 @@
                         draggable: true
                     })
                 }
-            }, {
+            }/*, {
                 key: "setBikes",
                 value: function setBikes(bikes) {
                     if (this.rubikes.length ==
@@ -11154,7 +11158,7 @@
                 value: function clearPlacePath() {
                     this.placeDirections.clearPath()
                 }
-            }, {
+            }*/, {
                 key: "setOriginLocation",
                 value: function setOriginLocation() {
                     if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(position) {
@@ -11164,14 +11168,14 @@
                             zoom: 18
                         });
                         this.googleMap.setCenter(initialLocation);
-                        this.person.setPosition(initialLocation)
+                        //this.person.setPosition(initialLocation)
                     }.bind(this))
                 }
             }]);
             return Map
         }();
         exports.default = Map
-    },
+    }/*,
     function(module, exports) {
         Object.defineProperty(exports, "__esModule", {
             value: true
@@ -11196,7 +11200,8 @@
         function _classCallCheck(instance, Constructor) {
             if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
         }
-        var Person = function() {
+        
+		var Person = function() {
             function Person(map) {
                 _classCallCheck(this,
                     Person);
@@ -11412,7 +11417,7 @@
             })
         };
         exports.default = Socket
-    },
+    }*/,
     function(module, exports,
         __webpack_require__) {
         var url = __webpack_require__(185);
@@ -15801,7 +15806,7 @@
                     locationOriginToggle: false,
                     locationOriginInterval: null
                 };
-                _this.getNearestBike = _this.getNearestBike.bind(_this);
+                //_this.getNearestBike = _this.getNearestBike.bind(_this);
                 _this.myLocation = _this.myLocation.bind(_this);
                 _this.toggleSearchPanel = _this.toggleSearchPanel.bind(_this);
                 _this.placeBtnHendler = _this.placeBtnHendler.bind(_this);
@@ -15810,7 +15815,7 @@
                 _this.hideSearchPanel = _this.hideSearchPanel.bind(_this);
                 return _this
             }
-            _createClass(UI, [{
+            _createClass(UI, [/*{
                 key: "getNearestBike",
                 value: function getNearestBike() {
                     if (this.state.navigationButToggle) {
@@ -15827,7 +15832,7 @@
                         $("#navigationBut i").html("stop")
                     }
                 }
-            }, {
+            },*/ {
                 key: "myLocation",
                 value: function myLocation() {
                     if (this.state.locationOriginToggle) {
@@ -15975,13 +15980,13 @@
                         onClick: this.myLocation
                     }, _react2.default.createElement("i", {
                         className: "material-icons"
-                    }, "my_location"))), _react2.default.createElement("li", null, _react2.default.createElement("a", _defineProperty({
+                    }, "my_location")))/*, _react2.default.createElement("li", null, _react2.default.createElement("a", _defineProperty({
                         className: "btn-floating yellow darken-1",
                         id: "navigationBut",
                         onClick: this.getNearestBike
                     }, "id", "navigationBut"), _react2.default.createElement("i", {
                         className: "material-icons"
-                    }, "navigation"))), _react2.default.createElement("span", {
+                    }, "navigation")))*/, _react2.default.createElement("span", {
                         id: "AccountLiHole"
                     }))), _react2.default.createElement("footer", {
                         id: "searchPanel",
