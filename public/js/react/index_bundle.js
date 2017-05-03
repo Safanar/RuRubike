@@ -11385,7 +11385,7 @@
         exports.default = Bike;
         Bike.panorama = null;
         Bike.currentInfowindow = null
-    },
+    }*/,
     function(module, exports, __webpack_require__) {
         Object.defineProperty(exports, "__esModule", {
             value: true
@@ -11411,13 +11411,13 @@
             this.socket.on("log", function(log) {
                 console.log(log)
             });
-            this.socket.on("bikes", function(response) {
+            /*this.socket.on("bikes", function(response) {
                 var bikes = response.result;
                 _this.map.setBikes(bikes)
-            })
+            */})
         };
         exports.default = Socket
-    }*/,
+    },
     function(module, exports,
         __webpack_require__) {
         var url = __webpack_require__(185);
