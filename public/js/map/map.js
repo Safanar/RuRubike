@@ -1,6 +1,7 @@
 import Person from './person'
 import Directions from './direction'
 import Bike from './bike'
+import Space from './space'
 
 export default class Map{
 
@@ -12,6 +13,7 @@ export default class Map{
       disableDefaultUI: true
     };
     this.rubikes = [];
+    this.paspaces = [];
     this.googleMap = new google.maps.Map(
       document.getElementById('googleMapDiv'),
     this.mapOptions);;
@@ -22,6 +24,7 @@ export default class Map{
     this.unLockMove = this.unLockMove.bind(this);
     this.setOriginLocation = this.setOriginLocation.bind(this);
     this.setBikes = this.setBikes.bind(this);
+    this.setSpaces = this.setSpaces.bind(this);
     this.setNearestBikePath = this.setNearestBikePath.bind(this);
     this.clearPath = this.clearPath.bind(this);
     this.findPlacePath = this.findPlacePath.bind(this);
@@ -37,7 +40,7 @@ export default class Map{
   unLockMove() {
     this.googleMap.setOptions({draggable: true});
   }
-  
+
   setBikes(bikes) {
     if(this.rubikes.length==0){
       for(var i=0;i<bikes.length;i++){
@@ -51,6 +54,24 @@ export default class Map{
         var bike = bikes[i];
         var myLatlng = new google.maps.LatLng(parseFloat(bike.location.latitude),parseFloat(bike.location.longitude));
         this.rubikes[i].marker.setPosition(myLatlng);
+      }
+    }
+  }
+    
+  setSpaces(spaces){
+    if(this.paspaces.length==0){
+      for(var i=0;i<spaces.length;i++){
+        var obj = new Space(this,spaces[i],i);
+        obj.attachSecretMessage();
+        this.paspaces.push(obj);
+      }
+	  
+    }
+    else{
+      for(var i=0;i<spaces.length&&i<this.paspaces.length;i++){
+        var space = spaces[i];
+        var myLatlng = new google.maps.LatLng(parseFloat(space.location.latitude),parseFloat(space.location.longitude));
+        this.paspaces[i].marker.setPosition(myLatlng);
       }
     }
   }
