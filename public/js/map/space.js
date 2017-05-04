@@ -34,8 +34,8 @@ export default class Space{
           $('#streetview').click(()=>{Space.panorama.setVisible(true);});
           $('#closebut').click(()=>{Space.currentInfowindow.close();});
         }.bind(this));
-    }.bind(this));*/
-  }
+    }.bind(this));
+  }*/
 }
 
 Space.panorama = null;
