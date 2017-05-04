@@ -62,10 +62,9 @@ export default class Map{
     if(this.paspaces.length==0){
       for(var i=0;i<spaces.length;i++){
         var obj = new Space(this,spaces[i],i);
-        obj.attachSecretMessage();
+        //obj.attachSecretMessage();
         this.paspaces.push(obj);
       }
-	  
     }
     else{
       for(var i=0;i<spaces.length&&i<this.paspaces.length;i++){
