@@ -11,6 +11,7 @@ export default class Socket{
 			{location : {latitude : 24.795335 ,longitude : 120.997614} }
 		]
 		this.map.setSpaces(spaces);
+		this.map.setSpaces(spaces);
 		
 		this.socket.on('log', function (log) {
 			console.log(log);
