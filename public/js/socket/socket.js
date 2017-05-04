@@ -5,9 +5,9 @@ export default class Socket{
 		this.map = map;
 
 		var spaces =[
-			{location : {latitude : 24.795942 ,longitude : 120.996966}}
-			{location : {latitude : 24.795879 ,longitude : 120.997068} }
-			{location : {latitude : 24.795403 ,longitude : 120.997534} }
+			{location : {latitude : 24.795942 ,longitude : 120.996966} },
+			{location : {latitude : 24.795879 ,longitude : 120.997068} },
+			{location : {latitude : 24.795403 ,longitude : 120.997534} },
 			{location : {latitude : 24.795335 ,longitude : 120.997614} }
 		]
 		this.map.setSpaces(spaces);
