@@ -51,6 +51,7 @@ class SocketIO
 			socket.on('disconnect',function() 
 			{
 				clearInterval(getBikesInterval);
+				clearInterval(getCarsInterval);
 			});
 		});
 	}
