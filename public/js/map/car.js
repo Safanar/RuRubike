@@ -1,6 +1,6 @@
 import {map} from '../react/index'
 
-export default class Space{
+export default class Car{
   constructor(map,space,index){
     this.Car = Car;
     this.icon = {
