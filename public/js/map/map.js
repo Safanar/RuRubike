@@ -1,7 +1,7 @@
 import Person from './person'
 import Directions from './direction'
 import Bike from './bike'
-import Space from './space'
+import Car from './car'
 
 export default class Map{
 
@@ -13,7 +13,7 @@ export default class Map{
       disableDefaultUI: true
     };
     this.rubikes = [];
-    this.paspaces = [];
+    this.pacars = [];
     this.googleMap = new google.maps.Map(
       document.getElementById('googleMapDiv'),
     this.mapOptions);;
@@ -24,7 +24,7 @@ export default class Map{
     this.unLockMove = this.unLockMove.bind(this);
     this.setOriginLocation = this.setOriginLocation.bind(this);
     this.setBikes = this.setBikes.bind(this);
-    this.setSpaces = this.setSpaces.bind(this);
+    this.setCars = this.setCars.bind(this);
     this.setNearestBikePath = this.setNearestBikePath.bind(this);
     this.clearPath = this.clearPath.bind(this);
     this.findPlacePath = this.findPlacePath.bind(this);
@@ -58,19 +58,20 @@ export default class Map{
     }
   }
     
-  setSpaces(spaces){
-    if(this.paspaces.length==0){
-      for(var i=0;i<spaces.length;i++){
-        var obj = new Space(this,spaces[i],i);
+  setCars(Cars){
+    if(this.pacars.length==0){
+      for(var i=0;i<Cars.length;i++){
+        var obj = new Car(this,Cars[i],i);
         //obj.attachSecretMessage();
-        this.paspaces.push(obj);
+        this.pacars.push(obj);
       }
+	  
     }
     else{
-      for(var i=0;i<spaces.length&&i<this.paspaces.length;i++){
-        var space = spaces[i];
-        var myLatlng = new google.maps.LatLng(parseFloat(space.location.latitude),parseFloat(space.location.longitude));
-        this.paspaces[i].marker.setPosition(myLatlng);
+      for(var i=0;i<Cars.length&&i<this.pacars.length;i++){
+        var Car = Cars[i];
+        var myLatlng = new google.maps.LatLng(parseFloat(Car.location.latitude),parseFloat(Car.location.longitude));
+        this.pacars[i].marker.setPosition(myLatlng);
       }
     }
   }
