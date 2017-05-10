@@ -4,7 +4,7 @@ export default class Space{
   constructor(map,space,index){
     this.space = space;
     this.icon = {
-      url: 'http://filmsxpress.com/userimages/147/images/parking.png', // url
+      url: 'http://www.regencysecureparking.co.uk/images/128px-Parking_icon.png', // url
       scaledSize: new google.maps.Size(40, 40), // scaled size
     };
     this.marker = new google.maps.Marker({
