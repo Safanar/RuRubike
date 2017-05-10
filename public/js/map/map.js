@@ -58,18 +58,18 @@ export default class Map{
     }
   }
     
-  setCars(Cars){
+  setCars(cars){
     if(this.pacars.length==0){
-      for(var i=0;i<Cars.length;i++){
-        var obj = new Car(this,Cars[i],i);
+      for(var i=0;i<cars.length;i++){
+        var obj = new Car(this,cars[i],i);
         //obj.attachSecretMessage();
         this.pacars.push(obj);
       }
 	  
     }
     else{
-      for(var i=0;i<Cars.length&&i<this.pacars.length;i++){
-        var Car = Cars[i];
+      for(var i=0;i<cars.length&&i<this.pacars.length;i++){
+        var Car = cars[i];
         var myLatlng = new google.maps.LatLng(parseFloat(Car.location.latitude),parseFloat(Car.location.longitude));
         this.pacars[i].marker.setPosition(myLatlng);
       }
