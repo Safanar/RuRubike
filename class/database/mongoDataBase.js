@@ -42,18 +42,10 @@ class Mongo
 	{
 		this.MongoDatabase.collection('bike').find({}).toArray(callback);
 	}
-	getCars(callback) 
-	{
-		this.MongoDatabase.collection('car').find({}).toArray(callback);
-	}
 
 	getOneBike(json, callback) 
 	{
 		this.MongoDatabase.collection('bike').find(json).toArray(callback);
-	}
-	getOneCar(json, callback) 
-	{
-		this.MongoDatabase.collection('car').find(json).toArray(callback);
 	}
 
 	setBike(id,state,battery,kid,callback) 
@@ -72,12 +64,29 @@ class Mongo
 		}
 		,callback);
 	}
+	updateBike(id, lat, long, state, battery, callback) 
+	{
+		this.MongoDatabase.collection('bike').updateOne(
+			{ id : id },
+			{ $set : { location : { latitude : lat, longitude : long },
+					   state    : state,
+					   battery  : battery } },
+			callback);
+	}
 	
+	getCars(callback) 
+	{
+		this.MongoDatabase.collection('car').find({}).toArray(callback);
+	}
+	getOneCar(json, callback) 
+	{
+		this.MongoDatabase.collection('car').find(json).toArray(callback);
+	}
 	setCar(id,state,battery,callback) 
 	{
-		this.MongoDatabase.collection('bike').insertOne(
+		this.MongoDatabase.collection('car').insertOne(
 		{
-			id 		: id,
+			_id 		: id,
 			state 	: state,
 			battery : battery,
 			location: {
@@ -89,26 +98,16 @@ class Mongo
 		}
 		,callback);
 	}
-
-	updateBike(id, lat, long, state, battery, callback) 
-	{
-		this.MongoDatabase.collection('bike').updateOne(
-			{ id : id },
-			{ $set : { location : { latitude : lat, longitude : long },
-					   state    : state,
-					   battery  : battery } },
-			callback);
-	}
 	updateCar(id, lat, long, state, battery, callback) 
 	{
-		this.MongoDatabase.collection('bike').updateOne(
-			{ id : id },
+		this.MongoDatabase.collection('car').updateOne(
+			{ _id : id },
 			{ $set : { location : { latitude : lat, longitude : long },
 					   state    : state,
 					   battery  : battery } },
 			callback);
 	}
-
+     
 	insertContact(data,callback) 
 	{
 		this.MongoDatabase.collection('contact').insertOne(
