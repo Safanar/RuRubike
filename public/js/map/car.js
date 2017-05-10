@@ -1,23 +1,23 @@
 import {map} from '../react/index'
 
 export default class Car{
-  constructor(map,space,index){
-    this.Car = Car;
+  constructor(map,car,index){
+    this.car = car;
     this.icon = {
       url: 'https://s-media-cache-ak0.pinimg.com/originals/7e/0f/a8/7e0fa8e40440ec3409ee08eb747126cc.jpg', // url
-      scaledSize: new google.maps.Size(20, 20), // scaled size
+      scaledSize: new google.maps.Size(40, 40), // scaled size
     };
     this.marker = new google.maps.Marker({
       map: map.googleMap,
-      position: {lat: parseFloat(Car.location.latitude), lng: parseFloat(Car.location.longitude)},
+      position: {lat: parseFloat(car.location.latitude), lng: parseFloat(car.location.longitude)},
       icon: this.icon,
       customInfo: this.index
     });
     //this.attachSecretMessage = this.attachSecretMessage.bind(this);
   }
-
-  /*attachSecretMessage() {
-    $.post('/viewOfBikeInfo',{action:'bikeInfo',json:this.bike},function (Content) {
+   /*
+  attachSecretMessage() {
+    $.post('/viewOfBikeInfo',{action:'bikeInfo',json:this.car},function (Content) {
       var infowindow = new google.maps.InfoWindow({
         content: Content
       });
