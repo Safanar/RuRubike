@@ -4,8 +4,8 @@ export default class Space{
   constructor(map,space,index){
     this.space = space;
     this.icon = {
-      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Feature_parking.svg/2000px-Feature_parking.svg.png', // url
-      scaledSize: new google.maps.Size(20, 20), // scaled size
+      url: 'http://filmsxpress.com/userimages/147/images/parking.png', // url
+      scaledSize: new google.maps.Size(40, 40), // scaled size
     };
     this.marker = new google.maps.Marker({
       map: map.googleMap,
