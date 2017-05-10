@@ -2,7 +2,7 @@ var Login = require('./login/login.js');
 var ViewOfBikeInfo = require('./viewOfBikeInfo/viewOfBikeInfo.js');
 var Contact = require('./contact/contact.js');
 var Bike = require('./bike/bike.js');
-var Car = require('./bike/car.js');
+//var Car = require('./bike/car.js');
 
 class ruruBikeApi
 {
