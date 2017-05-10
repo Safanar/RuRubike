@@ -28,6 +28,25 @@ class SocketIO
 					});
 				}
 			},1000);
+			
+			var getCarsInterval =  setInterval(function() 
+			{
+				if(that.mongoDataBase.MongoDatabase != null)
+				{
+					that.mongoDataBase.getCars(function(err,data) 
+					{
+						if(err)
+						{
+							socket.emit('cars',tool.dberror());
+						}
+						else
+						{
+							//success and transport the data to the front-end
+							socket.emit('cars',tool.result(data,1));
+						}
+					});
+				}
+			},1000);
 
 			socket.on('disconnect',function() 
 			{
