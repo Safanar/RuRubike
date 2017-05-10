@@ -11,7 +11,7 @@ class ruruBikeApi
 		var that = this;
 		this.login = new Login(app,mongodb,this);
 		this.bike = new Bike(app,mongodb);
-		//this.car = new Car(app,mongodb);
+		this.car = new Car(app,mongodb);
 		this.viewOfBikeInfo = new ViewOfBikeInfo(app,mongodb);
 		this.contact = new Contact(app,mongodb);
 		this.apiAccess = {};
