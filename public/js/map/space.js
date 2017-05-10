@@ -4,7 +4,7 @@ export default class Space{
   constructor(map,space,index){
     this.space = space;
     this.icon = {
-      url: 'http://www.regencysecureparking.co.uk/images/128px-Parking_icon.png', // url
+      url: 'http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/magic-marker-icons-transport-travel/116392-magic-marker-icon-transport-travel-transportation-bicycle.png', // url
       scaledSize: new google.maps.Size(40, 40), // scaled size
     };
     this.marker = new google.maps.Marker({
