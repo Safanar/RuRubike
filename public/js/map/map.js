@@ -69,8 +69,8 @@ export default class Map{
     }
     else{
       for(var i=0;i<cars.length&&i<this.pacars.length;i++){
-        var Car = cars[i];
-        var myLatlng = new google.maps.LatLng(parseFloat(Car.location.latitude),parseFloat(Car.location.longitude));
+        var car = cars[i];
+        var myLatlng = new google.maps.LatLng(parseFloat(car.location.latitude),parseFloat(car.location.longitude));
         this.pacars[i].marker.setPosition(myLatlng);
       }
     }
