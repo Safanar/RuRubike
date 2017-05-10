@@ -4,7 +4,7 @@ export default class Space{
   constructor(map,space,index){
     this.space = space;
     this.icon = {
-      url: 'https://s-media-cache-ak0.pinimg.com/originals/7e/0f/a8/7e0fa8e40440ec3409ee08eb747126cc.jpg', // url
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Feature_parking.svg/2000px-Feature_parking.svg.png', // url
       scaledSize: new google.maps.Size(20, 20), // scaled size
     };
     this.marker = new google.maps.Marker({
