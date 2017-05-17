@@ -21,8 +21,8 @@ class Car
 
 		app.post('/setCar',function(req,res) {
 			var data = tool.antiXSS(req.body);
-			//var kid = tool.generateUUID();
-			that.setCar(data.id,data.state,data.battery,function(response) {
+			var kid = tool.generateUUID();
+			that.setCar(data.id,data.state,data.battery,kid,function(response) {
 				res.send(response);
 			});
 		});
@@ -62,8 +62,8 @@ class Car
 		});
 	}
 
-	setCar(id, state, battery, callback) {
-		this.mongoDataBase.setCar(id, state, battery, function(err, data) {
+	setCar(id, state, battery,kid, callback) {
+		this.mongoDataBase.setCar(id, state, battery,kid, function(err, data) {
 			if(err){
 				callback(tool.dberror());
 			}
