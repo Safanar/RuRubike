@@ -86,7 +86,7 @@ class Mongo
 	{
 		this.MongoDatabase.collection('car').insertOne(
 		{
-			_id 		: id,
+			id 		: id,
 			state 	: state,
 			battery : battery,
 			location: {
