@@ -13,11 +13,11 @@ export default class Car{
       icon: this.icon,
       customInfo: this.index
     });
-    //this.attachSecretMessage = this.attachSecretMessage.bind(this);
+    this.attachSecretMessage = this.attachSecretMessage.bind(this);
   }
-   /*
+   
   attachSecretMessage() {
-    $.post('/viewOfBikeInfo',{action:'bikeInfo',json:this.car},function (Content) {
+    $.post('/viewOfCarInfo',{action:'carInfo',json:this.car},function (Content) {
       var infowindow = new google.maps.InfoWindow({
         content: Content
       });
@@ -35,7 +35,7 @@ export default class Car{
           $('#closebut').click(()=>{Car.currentInfowindow.close();});
         }.bind(this));
     }.bind(this));
-  }*/
+  }
 }
 
 Car.panorama = null;
