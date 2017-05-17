@@ -28,4 +28,4 @@ class ViewOfCarInfo
 	}
 }
 
-module.exports = ViewOfBikeInfo;
+module.exports = ViewOfCarInfo;
