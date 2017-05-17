@@ -82,7 +82,7 @@ class Mongo
 	{
 		this.MongoDatabase.collection('car').find(json).toArray(callback);
 	}
-	setCar(id,state,battery,callback) 
+	setCar(id,state,battery,kid,callback) 
 	{
 		this.MongoDatabase.collection('car').insertOne(
 		{
@@ -93,8 +93,8 @@ class Mongo
 				latitude  : -1,
 				longitude : -1
 			},
-			//kid		: kid,
-			//time: new Date()
+			kid		: kid,
+			time: new Date()
 		}
 		,callback);
 	}
