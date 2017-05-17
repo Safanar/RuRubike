@@ -62,7 +62,7 @@ export default class Map{
     if(this.pacars.length==0){
       for(var i=0;i<cars.length;i++){
         var obj = new Car(this,cars[i],i);
-        //obj.attachSecretMessage();
+        obj.attachSecretMessage();
         this.pacars.push(obj);
       }
 	  
